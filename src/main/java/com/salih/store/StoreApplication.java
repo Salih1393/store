@@ -9,9 +9,12 @@ public class StoreApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+
         var orderService = context.getBean(OrderService.class);
-//        var orderService = new OrderService(new PayPalPaymentService());
         orderService.placeOrder();
+
+        var notificationManager = context.getBean(NotificationManager.class);
+        notificationManager.sendNotification("This is a test");
     }
 
 }
