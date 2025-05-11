@@ -15,6 +15,8 @@ public class StoreApplication {
 
         var notificationManager = context.getBean(NotificationManager.class);
         notificationManager.sendNotification("This is a test");
+
+        var resource = context.getBean(HeavyResource.class);
     }
 
 }
