@@ -13,6 +13,8 @@ public class StoreApplication {
         var orderService = context.getBean(OrderService.class);
         orderService.placeOrder();
 
+        var orderService2 = context.getBean(OrderService.class);
+
         var notificationManager = context.getBean(NotificationManager.class);
         notificationManager.sendNotification("This is a test");
 
